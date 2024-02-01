@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Blur or scroll ( 07 august 2019 ) </title>
+	<style type="text/css">
+		body {
+			height: 2000px;
+			margin: 0;
+		}
+
+		section {
+			height: 100vh;
+		}
+
+		img {
+			width: 100%;
+		}
+	</style>
+</head>
+
+<body>
+	<section>
+		<img src="zebra.jpg" alt="" />
+	</section>
+
+	<script>
+		window.addEventListener('scroll', function () {
+			let section = document.querySelector('section');
+			section.style.filter = `blur(${window.scrollY / 100}px)`;
+		});
+	</script>
+</body>
+
+</html>
